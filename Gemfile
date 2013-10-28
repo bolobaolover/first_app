@@ -3,8 +3,11 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
+# This gem enables serving assets in production and setting your logger to standard out, 
+# both of which are required for to run a Rails 4 application on a twelve-factor provider
+gem 'rails_12factor', group: :production
 
+# Use sqlite3 as the database for Active Record
 group :production do
   gem 'pg'
 end
